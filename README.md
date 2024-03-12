@@ -9,7 +9,7 @@ Repositorio de la Materia Statistical Tools for Data Analysis de la Ingeniería 
 
 ## Pre Requisitos
 * Python 3.9+
-* Pipenv
+* Astral UV
 * Git
 * Jupyter Notebooks
 
@@ -27,17 +27,20 @@ git pull
 ```
 
 ## Dependencias
-El repositorio cuenta con un archivo llamado `Pipfile`, el cual contiene todas las librerías necesarias para ejecutar los Jupyter Notebooks en sus computadoras.
+El repositorio cuenta con un archivo llamado `requirements.txt`, el cual contiene todas las librerías necesarias para ejecutar los Jupyter Notebooks en sus computadoras.
+
+
 ### Ejecución del Ambiente Virtual
 Con el objetivo de tener una instalación más limpia y organizada, es necesario crear un ambiente virutal para este proyecto, donde únicamente se instalarán los paquetes requeridos por los Jupyter Notebooks vistos en clase, para crear el ambiente es necesario ejecutar el siguiente comando:
 ```bash
-pipenv shell
+uv venv .venv-stats
 ```
 
 ### Instalación de Paquetes
 Una vez que el ambiente virtual está activado, se puede hacer la instalación de las dependencias con el comando:
 ```bash
-pipenv install
+source ./.venv-stats/bin/activate
+uv pip install -r requirements.txt
 ```
 
 ## Jupyter Notebooks
